@@ -9,7 +9,9 @@ def fizzbuzz():
             print("Buzz", end=" ")
         else:
             print(i, end=" ")
-    print('\b')  
+    print("")
 
+# Example usage:
 if __name__ == "__main__":
     fizzbuzz()
+
