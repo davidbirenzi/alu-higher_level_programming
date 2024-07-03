@@ -10,5 +10,8 @@ my_list = [1, 2, 3, "School", 4, 5, [1, 2, 3]]
 nb_print = safe_print_list_integers(my_list, 7)  # Using 7 directly instead of len(my_list)
 print("nb_print: {:d}".format(nb_print))
 
-nb_print = safe_print_list_integers(my_list, 9)  # Using 9 directly instead of len(my_list) + 2
-print("nb_print: {:d}".format(nb_print))
+try:
+    nb_print = safe_print_list_integers(my_list, 9)  # Using 9 directly instead of len(my_list) + 2
+    print("nb_print: {:d}".format(nb_print))
+except IndexError:
+    print("Caught an IndexError as expected")
