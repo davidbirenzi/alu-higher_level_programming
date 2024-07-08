@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+"""
+This module defines a simple Rectangle class.
+
+The Rectangle class is currently empty and serves as a placeholder.
+
+"""
 
 
 class Rectangle:
