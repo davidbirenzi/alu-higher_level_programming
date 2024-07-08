@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
 """
-Module 1-rectangle.py
+Module 2-rectangle.py
 
 This module defines the Rectangle class, which represents a rectangle with
-private attributes.
+private attributes for width and height. It includes getters and setters for
+both attributes to enforce type checking and validation, along with methods
+to calculate area and perimeter.
 
 """
 
@@ -12,13 +14,15 @@ private attributes.
 class Rectangle:
     """
     Class representing a rectangle.
-    
+
+
     """
-     def __init__(self, width=0, height=0):
+
+    def __init__(self, width=0, height=0):
         """
-        Initializes a Rectangle instance with optional width and height.
-  
-         """
+        Initializes a Rectangle instance with optional width
+
+        """
         self.width = width
         self.height = height
 
@@ -54,10 +58,27 @@ class Rectangle:
     def height(self, value):
         """
         Setter method for setting the height of the rectangle.
-       
-       """
+
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Calculates and returns the area of the rectangle.
+
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Calculates and returns the perimeter of the rectangle
+
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
+
