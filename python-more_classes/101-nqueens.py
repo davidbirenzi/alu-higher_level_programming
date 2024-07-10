@@ -16,10 +16,10 @@ def is_valid(board, row, col):
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
-           board[i] + i == col + row:
-    
+           board[i] + i == col + row:    
             return False
     return True
+
 
 def solve_nqueens(N, row, board, solutions):
     if row == N:
@@ -30,6 +30,7 @@ def solve_nqueens(N, row, board, solutions):
             board[row] = col
             solve_nqueens(N, row + 1, board, solutions)
             board[row] = -1
+
 
 def main():
     if len(sys.argv) != 2:
