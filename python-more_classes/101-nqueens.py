@@ -1,19 +1,23 @@
 #!/usr/bin/python3
 import sys
 
+
 def print_usage_and_exit():
     print("Usage: nqueens N")
     sys.exit(1)
 
+
 def print_error_and_exit(message):
     print(message)
     sys.exit(1)
+
 
 def is_valid(board, row, col):
     for i in range(row):
         if board[i] == col or \
            board[i] - i == col - row or \
            board[i] + i == col + row:
+    
             return False
     return True
 
@@ -46,6 +50,7 @@ def main():
     for solution in solutions:
         formatted_solution = [[i, solution[i]] for i in range(N)]
         print(formatted_solution)
+
 
 if __name__ == "__main__":
     main()
