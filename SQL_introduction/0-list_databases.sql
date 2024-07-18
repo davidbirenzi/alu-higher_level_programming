@@ -1,5 +1,3 @@
-#here below iis the query forr listing alll databases inn my server
-
+-- query for listing all databases
 SHOW databases;
-#this displays all databases in your server
 
