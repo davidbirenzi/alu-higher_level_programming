@@ -1,3 +1,2 @@
---list all fields and records
+-- all rows
 SELECT * FROM first_table;
-
