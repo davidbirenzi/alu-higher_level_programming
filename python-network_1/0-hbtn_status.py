@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""I document you"""
 import urllib.request
 
 url = 'https://alu-intranet.hbtn.io/status'
