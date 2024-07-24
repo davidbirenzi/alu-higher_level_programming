@@ -5,6 +5,9 @@
 """
 import requests
 
+url = 'https://intranet.hbtn.io/status'
+if url.startswith('https://'):
+    url = 'https://alu-intranet.hbtn.io/status'
 
 if __name__ == "__main__":
     r = requests.get("https://intranet.hbtn.io/status")
