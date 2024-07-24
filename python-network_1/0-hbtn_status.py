@@ -3,8 +3,12 @@
 - Write a Python script that fetches https://alu-intranet.hbtn.io/status
 - using the urllib package.
 """
+
 import urllib.request
 
+url = 'https://intranet.hbtn.io/status'
+if url.startswith('https://'):
+    url = 'https://intranet.hbtn.io/status'
 
 if __name__ == '__main__':
     with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
