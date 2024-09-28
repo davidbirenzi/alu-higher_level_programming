@@ -1,6 +1,9 @@
 #!/usr/bin/node
-exports.logMe = function (item) {
-  if (typeof this.count === 'undefined') this.count = 0;
-  console.log(this.count + ': ' + item);
-  this.count++;
+exports.esrever = function (list = []) {
+  const newList = [];
+  for (let i = list.length; i >= 0; i--) {
+    newList.push(list[i]);
+  }
+  newList.shift();
+  return newList;
 };
